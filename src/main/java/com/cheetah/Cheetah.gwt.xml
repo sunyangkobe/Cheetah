@@ -1,0 +1,41 @@
+<!DOCTYPE module PUBLIC '//gwt-module/' 'http://google-web-toolkit.googlecode.com/svn/tags/1.6.2/distro-source/core/src/gwt-module.dtd'>
+<module rename-to="Cheetah">
+
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<!-- extend locale for en and zh level -->
+	<inherits name='com.google.gwt.i18n.I18N' />
+	<extend-property name='locale' values='zh' />
+	<extend-property name='locale' values='en' />
+
+	<!-- Compile for all browser engines -->
+	<!-- Change value set to fit your requirements -->
+	<set-property name='user.agent' value='ie6,gecko,gecko1_8,safari,opera' />
+
+	<!-- Inherit the core GXT stuff. -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+
+	<!-- inherit gwt-log at debug level -->
+	<inherits name='com.allen_sauer.gwt.log.gwt-log-DEBUG' />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-RemoteLogger" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+
+	<!-- inherit gwt-presenter and gwt-dispatch for dependency injection -->
+	<inherits name='com.google.gwt.inject.Inject' />
+	<inherits name='net.customware.gwt.presenter.Presenter' />
+	<inherits name='net.customware.gwt.dispatch.Dispatch' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.cheetah.core.client.Cheetah' />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='Cheetah.css' />
+
+	<!-- Tell GWT compiler the path to compile -->
+	<!-- This is the start of source control for multi-module management -->
+	<source path="core/client" />
+	<source path="core/shared" />
+
+</module>
